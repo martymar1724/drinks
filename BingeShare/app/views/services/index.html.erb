@@ -1,0 +1,36 @@
+<div class="row">
+
+    <% @services.each do |t| %>
+        <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-aqua">
+        <div class="inner">
+	        <h3><%= t.name %></h3>
+	        <p><%= t.user_login %></p>
+	        <p><%= t.login_password %></p>
+	        <p><%= t.group_id %></p>
+        	
+        	
+        </div>
+
+        <div class="icon">
+        	<!-- Place icon here
+            <i class="fa fa-tasks"></i>
+            -->
+        </div>	
+	<%= link_to " See services", service_path(t), class: "small-box-footer fa fa-minus-circle" %>  <br>  
+
+
+		</div>	
+    	</div>
+
+
+
+    <% end %>
+
+    </div>
+<div class="row">
+	<div class="col-lg-3 col-xs-6">
+
+	<div class="small-box bg-green">
+        <div class="inner">
+      <%= link_to 'Add Service', new_service_path, class: "btn btn-success"  %>	

@@ -1,0 +1,6 @@
+<%= form_for(:session, url: login_path) do |t| %> 
+  <%= t.email_field :email, :placeholder => "Email" %> 
+  <%= t.password_field :password_field, :placeholder => "Password" %> 
+  <%= t.submit "Log in", class: "btn-submit" %>
+<% end %>
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>

@@ -1,0 +1,13 @@
+      <% @services.each do |t| %>
+
+        <h1><%= t.name %></h1>
+        <p><%= t.user_login %></p>
+        <p><%= t.login_password %></p>
+        <p><%= t.group_id %></p>
+        <%= link_to 'Edit', edit_service_path(t) %>
+
+
+      <% end %>
+
+      <br>
+      <%= link_to 'Add Service', new_service_path %>
