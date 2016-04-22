@@ -1,0 +1,55 @@
+<div class="col-lg-3 col-xs-6">
+<%= form_for @service, html: {role: "form"} do |t| %>  
+	<div class="box-body"> 
+		<div class="form-group">
+
+		<div class="input-group">
+		<div class="input-group-addon">
+		<i class="fa fa-heart"></i>
+
+		</div>
+	    <%= t.text_area :url, :placeholder => "URL goes here", class: "form-control" %> 
+	    </div>
+	    <br>
+
+		<div class="input-group">
+		<div class="input-group-addon">
+		<i class="fa fa-envelope-o"></i>
+
+		</div>
+	    <%= t.text_area :login_name, :placeholder => "Login name here", class: "form-control"  %>
+	    </div>
+	    <br>
+
+	    <div class="input-group">
+		<div class="input-group-addon">
+		<i class="fa fa-lock"></i>
+		</div>
+		
+	    <%= t.text_area :login_password, :placeholder => "Password here", class: "form-control"  %> 
+	    </div>
+	    <br>
+	    </div>
+	    	    </div>
+	    	    	    </div>
+	    <div class="col-md-6">
+	    <div class="box-body">
+	    <div class="form-group">
+		<%= t.collection_select :member1, User.order(:id),:id, :email, {}, class: "form-control" %> <br>
+		<%= t.collection_select :member2, User.order(:id),:id, :email, {}, class: "form-control" %>	<br>
+		<%= t.collection_select :member3, User.order(:id),:id, :email, {}, class: "form-control" %>	<br>
+		<%= t.collection_select :member4, User.order(:id),:id, :email, {}, class: "form-control" %>	<br>
+		</div>
+	    </div>
+	    </div>
+	    <br>
+		<%= t.submit "Update", :class => "btn btn-success" %> 
+
+	<div> 
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<% end %>
+

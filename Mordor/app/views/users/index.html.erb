@@ -1,0 +1,44 @@
+<div class="row">
+
+
+    <% @users.each do |t| %> 
+    <div class="col-md-4">
+              
+        <div class="box box-widget widget-user">
+
+            <div class="box box-widget widget-user">
+                <!-- Add the bg color to the header using any of the bg-* classes -->
+                <div class="widget-user-header bg-aqua-active">
+                  <p class="widget-user-desc"><%= t.email %></p>
+                  <h5 class="widget-user-desc">Alm. Bruger</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img class="img-circle" src="dist/img/user1-128x128.jpg" alt="User Avatar">
+                </div>
+                <div class="box-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header"><%= "X antal" %></h5>
+                        <span class="description-text">Services</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header"><%= t.id %></h5>
+                        <span class="description-text">ID</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header">Y antal</h5>
+                        <span class="description-text">Grupper</span>
+                      </div><!-- /.description-block -->
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div>
+            </div><!-- /.widget-user -->
+        </div>
+    </div>
+    <% end %>
+

@@ -1,0 +1,10 @@
+<%= form_for(@user) do |t| %>  
+	<div > 
+	    <%= t.email_field :email, :placeholder => "Email" %>
+	    <%= t.password_field :password, :placeholder => "Password" %>  
+
+	</div> 
+	<div> 
+		<%= t.submit "Sign up" %> 
+	</div> 
+<% end %>
